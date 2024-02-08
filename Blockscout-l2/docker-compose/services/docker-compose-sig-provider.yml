@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  sig-provider-l2:
+    image: ghcr.io/blockscout/sig-provider:${SIG_PROVIDER_DOCKER_TAG:-latest}
+    pull_policy: always
+    platform: linux/amd64
+    restart: always
+    container_name: 'sig-provider-l2'
+    ports:
+      - 8159:8050
+

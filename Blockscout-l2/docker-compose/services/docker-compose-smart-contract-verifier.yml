@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  smart-contract-verifier-l2:
+    image: ghcr.io/blockscout/smart-contract-verifier:${SMART_CONTRACT_VERIFIER_DOCKER_TAG:-latest}
+    pull_policy: always
+    platform: linux/amd64
+    restart: always
+    container_name: 'smart-contract-verifier-l2'
+    env_file:
+      -  ../envs/common-smart-contract-verifier.env
+    ports:
+      - 9150:8050
+
