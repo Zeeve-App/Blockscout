@@ -11,6 +11,6 @@ services:
         POSTGRES_USER: 'postgresl2'
         POSTGRES_HOST_AUTH_METHOD: 'trust'
     ports:
-      - 7433:5433
+      - 7433:5432
     volumes:
       - ./blockscout-db-data-l2:/var/lib/postgresql/data/
